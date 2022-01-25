@@ -8,15 +8,8 @@
         <meta charset="utf-8">
         <title>Sam's English lessons</title>
         <style>
-			@media only screen and (min-width: 480px) {
-				#Welcome {
-					font-size: 4em;
-					
-				}
-				.fa { 
-				  width: 2em;  
-				}
-			}
+				
+			
 			html, body {
 				min-height: 100%;
 			}
@@ -26,6 +19,7 @@
 				background-position: 20% 85%;
 				background-size: cover;
 			}
+			/* --------------------------Welcome-----------------*/
 			#welcome {
 				text-shadow: -2px 0 black, 0 2px black, 2px 0 black, 0 -2px black;
 				font-family: 'Playfair Display', serif;
@@ -35,9 +29,45 @@
 				text-align: center;
 				position: -webkit-sticky;
 				position: sticky;
-				top: 1em;
-				font-size: 2em;
+				top: -1em;
+				font-size: 1.5em;
 			}
+			/* --------------------------Sign up and Login-----------------*/
+			.new-user {
+				font-family: 'Playfair Display', serif;
+				color: rgb(200,120,35);
+				font-weight: bold;
+				background-color: rgb(150,42,29);
+				border: 2px solid;
+				border-radius: 8px;
+				position: absolute;
+				top:5em;
+				right: 1em;
+				transition-duration: 0.4s;
+			}
+			.new-user:hover {
+				background-color: red; /* Green */
+				color: white;
+			}
+			.login {
+				font-family: 'Playfair Display', serif;
+				color: rgb(200,120,35);
+				font-weight: bold;
+				background-color: rgb(15,77,36);
+				border: 2px solid;
+				border-radius: 8px;
+				position: absolute;
+				top:7em;
+				right: 1em;
+				transition-duration: 0.4s;
+			}
+			
+			.login:hover {
+				background-color: #4CAF50; /* Green */
+				color: white;
+			}
+			
+			/* --------------------------Social Media-----------------*/
 			.social-media {
 				position: absolute;
 				right: 1em;
@@ -47,8 +77,9 @@
 				padding: 20px;  
 				text-align: center;  
 				margin: 5px 2px;  
-				font-size: 30px;  
-				width: 1em;  
+				font-size: 1em;  
+				width: 0.3em;  
+				height: 0.3em;
 				border-radius: 0.4em;
 			}
 			.fa-facebook {  
@@ -76,44 +107,33 @@
 			.fa-youtube:hover {
 				background-color: red;
 			}
-			.new-user {
-				font-family: 'Playfair Display', serif;
-				color: rgb(200,120,35);
-				font-weight: bold;
-				background-color: rgb(150,42,29);
-				border: 2px solid;
-				border-radius: 8px;
-				position: absolute;
-				top:2.2em;
-				right: 6em;
-				transition-duration: 0.4s;
+			/* --------------------------Different devices-----------------*/
+			@media only screen and (min-width: 480px) {
+				#welcome {
+					font-size: 1.5em;
+					
+				}
+				
 			}
-			.new-user:hover {
-				background-color: red; /* Green */
-				color: white;
-			}
-			.login {
-				font-family: 'Playfair Display', serif;
-				color: rgb(200,120,35);
-				font-weight: bold;
-				background-color: rgb(15,77,36);
-				border: 2px solid;
-				border-radius: 8px;
-				position: absolute;
-				top:2.2em;
-				right: 2em;
-				transition-duration: 0.4s;
+			@media only screen and (min-width: 768px) {
+				#welcome {
+					font-size: 20px;
+					
+				}
 			}
 			
-			.login:hover {
-				background-color: #4CAF50; /* Green */
-				color: white;
+			@media only screen and (min-width: 1140px) {
+				#welcome {
+					font-size: 2em;
+					
+				}
 			}
+			
         </style>
     </head>
     <body>
 		<div>
-		<h1 id="welcome">Sam's English lessons<h1>
+		<p id="welcome">Sam's English lessons<p>
 		
 		<button class="new-user">Sign up</button>
 				
