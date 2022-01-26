@@ -6,7 +6,7 @@
 			<link href="https://fonts.googleapis.com/css2?family=Playfair+Display&display=swap" rel="stylesheet">
 			<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">  
 			<meta charset="utf-8">
-				<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0," />
+				<meta name="viewport" content="width=device-width, initial-scale=1.0" />
 			<title>English lessons</title>
 			<style>
 					
@@ -16,23 +16,70 @@
 				}
 				body {
 					background: url("desk.jpg");
-					background-repeat: no-repeat;
 					background-position: 20% 85%;
 					background-size: cover;
+					background-attachment: fixed;
+					overflow: hidden;
+				}
+				
+				/* --------------------------Menu Button-----------------*/
+				.container {
+					 display: inline-block;
+					 cursor: pointer;
+				}
+				.bar1, .bar2, .bar3 {
+					width: 35px;
+					height: 5px;
+					background-color: rgb(200,120,35);;
+					margin: 6px 0;
+					transition: 0.4s;
+					border: 2px solid;
+					border-radius: 8px;
+					position: fixed;
+					left: 0.5em;
+					z-index: 1;
+						
+					
+				}
+				.bar1 {
+					top: 0.4em;
+				}
+				.bar2 {
+					top: 1em;
+				}
+				.bar3 {
+					top: 1.6em;
+				}
+				/* Rotate first bar */
+				.change .bar1 {
+					-webkit-transform: rotate(-45deg) translate(-9px, 6px) ;
+					transform: rotate(-45deg) translate(-9px, 6px) ;
+				}
+
+				/* Fade out the second bar */
+				.change .bar2 {
+					opacity: 0;
+				}
+
+				/* Rotate last bar */
+				.change .bar3 {
+					-webkit-transform: rotate(45deg) translate(-8px, -8px) ;
+					transform: rotate(45deg) translate(-8px, -8px) ;
 				}
 				/* --------------------------Welcome-----------------*/
 				.welcome {
 					text-shadow: -2px 0 black, 0 2px black, 2px 0 black, 0 -2px black;
 					font-family: 'Playfair Display', serif;
 					color: rgb(200,120,35);
-					
+					border-radius: 8px;
 					background:rgba(0,0,0,0.5);
 					text-align: center;
-					position: -webkit-sticky;
-					position: sticky;
-					top: -2em;
-					
+					position: fixed;
+					top: -0.6em;
+					width: 100%;
+					left: 0%;
 				}
+				
 				/* --------------------------Sign up and Login-----------------*/
 				.new-user {
 					font-family: 'Playfair Display', serif;
@@ -41,7 +88,7 @@
 					background-color: rgb(150,42,29);
 					border: 2px solid;
 					border-radius: 8px;
-					position: absolute;
+					position: fixed;
 					transition-duration: 0.4s;
 				}
 				.new-user:hover {
@@ -55,32 +102,29 @@
 					background-color: rgb(15,77,36);
 					border: 2px solid;
 					border-radius: 8px;
-					position: absolute;
+					position: fixed;
 					transition-duration: 0.4s;
 				}
-				
 				.login:hover {
 					background-color: #4CAF50; /* Green */
 					color: white;
 					color: rgb(200,120,35);
 				}
+				
 				/* --------------------------Social Media-----------------*/
-				.social-media {
-					position: absolute;
-					right: 1em;
-					bottom: 1em;
-				}
 				.fa {  
-					padding: 20px;  
+					padding: 0.7em;  
 					text-align: center;  
 					margin: 5px 2px;  
 					border-radius: 0.4em;
+					position: fixed;
 				}
 				.fa-facebook {  
 					background: #3B5998;  
 					color: white;  
 					transition-duration: 0.4s;
-					
+					right: 0em;
+					bottom: 7em;
 				}  
 				.fa-facebook:hover {
 					background-color: blue;
@@ -88,7 +132,9 @@
 				.fa-instagram {  
 					background: #125688;  
 					color: white; 
-					transition-duration: 0.4s;				
+					transition-duration: 0.4s;	
+					right: 0em;
+					bottom: 4.5em;	
 				}  
 				.fa-instagram:hover {
 					background-color: blue;
@@ -97,39 +143,52 @@
 					background: #bb0000;  
 					color: white;
 					transition-duration: 0.4s;
+					right: 0em;
+					bottom: 2em;
 				}  
 				.fa-youtube:hover {
 					background-color: red;
 				}
+				
+				.center-text {
+					font-family: 'Playfair Display', serif;
+					color: rgb(200,120,35);
+					border-radius: 8px;
+					background:rgba(0,0,0,0.5);
+					text-align: center;
+					overflow: auto;
+					height: 33em;
+					margin-top: 3em;
+					margin-bottom: 0em;
+					margin-left: 0em;
+					margin-right: 0em;
+					
+				}
 				/* --------------------------------------------------------------Different devices----------------------------------------*/
-				/* --------------------------------------- S8 Portrait----------*/
-				@media only screen and (min-width: 360px)
+				/* --------------------------------------Mobile Portrait----------*/
+				@media only screen
 				and (orientation: portrait) {
 					.welcome {
 						font-size: 1.5em;
 					}
 					.new-user {
 						font-size: 1em;
-						top:3.7em;
-						right: 0.6em;
+						top:2.8em;
+						right: 0.3em;
 					}
 					.login {
 						font-size: 1em;
-						top:1.7em;
-						right: 0.6em;
+						top:0.8em;
+						right: 0.3em;
 					}
 					.fa {
 						font-size: 1em;  
 						width: 0.6em;  
 						height: 0.6em;
 					}
-					.social-media {
-						
-						right: 0.2em;
-						bottom: 0em;
-					}
+					
 				}
-				/* ----------------------------------------------S8 Landscape------*/
+				/* ----------------------------------------Mobile Landscape------*/
 				@media only screen
 				and (orientation: landscape) {
 					.welcome {
@@ -137,100 +196,222 @@
 					}
 					.new-user {
 						font-size: 1em;
-						top:1.7em;
+						top:0.8em;
 						right: 5em;
 					}
 					.login {
 						font-size: 1em;
-						top:1.7em;
+						top:0.8em;
 						right: 1em;
 					}
 					.fa {
-						font-size: 1em;  
+						font-size: 0.8em;  
 						width: 0.6em;  
 						height: 0.6em;
 					}
-					
+					.fa-facebook {
+						bottom: 7em;
+					}
+					.fa-instagram {
+						bottom: 3.5em;
+					}
+					.fa-youtube {
+						bottom: 0em;
+					}
+					.center-text {
+						height: 14em;
+						margin-top: 3em;
+						margin-bottom: 0em;
+						margin-left: 0em;
+						margin-right: 0em;
+					}
 				}
 				
 				/*-------------------------------------------------Tablet Portrait----------*/
-				@media screen and (min-width: 820px) 
+				@media only screen and (min-width: 600px)
 				and (orientation: portrait) {
 					.welcome {
 						font-size: 2em;
+						top: -0.8em;
 					}
 					.new-user {
 						font-size: 1.3em;
-						top:1.8em;
+						top:0.5em;
 						right: 4em;
 					}
 					.login {
 						font-size: 1.3em;
-						top:1.8em;
+						top:0.5em;
 						right: 0.5em;
+					}
+					.fa {
+						padding: 1em;
+					}
+					.fa-facebook {
+						bottom: 9em;
+					}
+					.fa-instagram {
+						bottom: 6em;
+					}
+					.fa-youtube {
+						bottom: 3em;
+					}
+					.center-text {
+						height: 59em;
+						margin-top: 2em;
+						margin-bottom: 0em;
+						margin-left: 2.5em;
+						margin-right: 2.5em;
 					}
 				}
 				/*-----------------------------------------------Tablet Landscape----------*/
-				@media only screen and (min-width: 992px)
+				@media only screen and (min-width: 600px)
 				and (orientation: landscape) {
 					.welcome {
 						font-size: 2em;
+						top: -0.8em;
 					}
 					.new-user {
 						font-size: 1.2em;
-						top:2em;
+						top:0.7em;
 						right: 4.5em;
 					}
 					.login {
 						font-size: 1.2em;
-						top:2em;
+						top:0.7em;
 						right: 0.8em;
+					}
+					.fa {
+						padding: 1em;
+					}
+					.fa-facebook {
+						bottom: 8em;
+					}
+					.fa-instagram {
+						bottom: 5em;
+					}
+					.fa-youtube {
+						bottom: 2em;
+					}
+					.center-text {
+						height: 40em;
+						margin-top: 2em;
+						margin-bottom: 0em;
+						margin-left: 2.5em;
+						margin-right: 2.5em;
 					}
 				}
 				/*-----------------------------------------------Laptop----------*/
-				@media only screen and (min-width: 1200px) {
+				@media only screen and (min-width: 992px) {
 					.welcome {
 						font-size: 2em;
 					}
 					.new-user {
 						font-size: 1em;
-						top:2.5em;
+						top:0.9em;
 						right: 5em;
 					}
 					.login {
 						font-size: 1em;
-						top:2.5em;
+						top:0.9em;
 						right: 1em;
 					}
 					.fa {
+						padding: 1.2em;
 						font-size: 1em;  
 						width: 0.3em;  
 						height: 0.3em;
+					}
+					.fa-facebook {
+						bottom: 7em;
+					}
+					.fa-instagram {
+						bottom: 4em;
+					}
+					.fa-youtube {
+						bottom: 1em;
+					}
+					.center-text {
+						height: 33em;
+						margin-top: 2em;
+						margin-bottom: 0em;
+						margin-left: 2.5em;
+						margin-right: 2.5em;
 					}
 				}
 				
 			</style>
 		</head>
+		
+		
 		<body>
-			<div>
-			<p  class="welcome">Learning English</p>
 			
+			<div class="sticky-bar">
+				<div class="container" onclick="myFunction(this)">
+					<div class="bar1"></div>
+					<div class="bar2"></div>
+					<div class="bar3"></div>
+				</div>
+				<div>
+					<p  class="welcome">Learning English</p>
+					<button class="new-user">Sign up</button>	
+					<button class="login">Login</button>
+				</div>
 			</div>
-			<button class="new-user">Sign up</button>
-					
-			<button class="login">Login</button>
-			<ul class="social-media">
-				<li>   
-					<a href="https://www.facebook.com/samuel.cauchon.1" target="_blank" class="fa fa-facebook"> </a>   
-				</li>  
-				<li>  
-					<a href="https://www.instagram.com/whatsup.sam/" target="_blank" class="fa fa-instagram"> </a>  
-				</li>  
-				<li>
-					<a href="https://www.youtube.com/" target="_blank" class="fa fa-youtube"> </a>  
-				</li>
-				
-				
-			</ul>	
+			
+			<div>
+				<a href="https://www.facebook.com/samuel.cauchon.1" target="_blank" class="fa fa-facebook"> </a>   
+				<a href="https://www.instagram.com/whatsup.sam/" target="_blank" class="fa fa-instagram"> </a>  
+				<a href="https://www.youtube.com/" target="_blank" class="fa fa-youtube"> </a>  
+			</div>
+			<script>
+				function myFunction(x) {
+				  x.classList.toggle("change");
+				}
+			</script>
+			<p class="center-text">Welcome<br>
+				Welcome<br>
+				Welcome<br>
+				Welcome<br>
+				Welcome<br>
+				Welcome<br>
+				Welcome<br>
+				Welcome<br>
+				Welcome<br>
+				Welcome<br>
+				Welcome<br>
+				Welcome<br>
+				Welcome<br>
+				Welcome<br>
+				Welcome<br>
+				Welcome<br>
+				Welcome<br>
+				Welcome<br>
+				Welcome<br>
+				Welcome<br>
+				Welcome<br>
+				Welcome<br>
+				Welcome<br>
+				Welcome<br>
+				Welcome<br>
+				Welcome<br>
+				Welcome<br>
+				Welcome<br>
+				Welcome<br>
+				Welcome<br>
+				Welcome<br>
+				Welcome<br>
+				Welcome<br>
+				Welcome<br>
+				Welcome<br>
+				Welcome<br>
+				Welcome<br>
+				Welcome<br>
+				Welcome<br>
+				Welcome<br>
+				Welcome<br>
+				Welcome<br>
+				Welcome<br>
+			</p>
 		</body>
 	</html>
