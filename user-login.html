@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html>
+    <head>
+		<link rel="preconnect" href="https://fonts.googleapis.com">
+		<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+		<link href="https://fonts.googleapis.com/css2?family=Playfair+Display&display=swap" rel="stylesheet">
+		<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">  
+        <meta charset="utf-8">
+        <title>Sam's English lessons</title>
+        <style>
+				
+			
+			html, body {
+				min-height: 100%;
+			}
+			body {
+				background: url("desk.jpg");
+				background-repeat: no-repeat;
+				background-position: 20% 85%;
+				background-size: cover;
+			}
+			/* --------------------------Welcome-----------------*/
+			#welcome {
+				text-shadow: -2px 0 black, 0 2px black, 2px 0 black, 0 -2px black;
+				font-family: 'Playfair Display', serif;
+				color: rgb(200,120,35);
+       			background: transparent\9;
+				background:rgba(0,0,0,0.4);
+				text-align: center;
+				position: -webkit-sticky;
+				position: sticky;
+				top: -1em;
+				font-size: 25px;
+			}
+			/* --------------------------Sign up and Login-----------------*/
+			.new-user {
+				font-family: 'Playfair Display', serif;
+				color: rgb(200,120,35);
+				font-weight: bold;
+				background-color: rgb(150,42,29);
+				border: 2px solid;
+				border-radius: 8px;
+				position: absolute;
+				top:5em;
+				right: 1em;
+				transition-duration: 0.4s;
+			}
+			.new-user:hover {
+				background-color: red; /* Green */
+				color: white;
+			}
+			.login {
+				font-family: 'Playfair Display', serif;
+				color: rgb(200,120,35);
+				font-weight: bold;
+				background-color: rgb(15,77,36);
+				border: 2px solid;
+				border-radius: 8px;
+				position: absolute;
+				top:7em;
+				right: 1em;
+				transition-duration: 0.4s;
+			}
+			
+			.login:hover {
+				background-color: #4CAF50; /* Green */
+				color: white;
+			}
+			
+			/* --------------------------Social Media-----------------*/
+			.social-media {
+				position: absolute;
+				right: 1em;
+				bottom: 1em;
+			}
+			.fa {  
+				padding: 20px;  
+				text-align: center;  
+				margin: 5px 2px;  
+				font-size: 1em;  
+				width: 0.3em;  
+				height: 0.3em;
+				border-radius: 0.4em;
+			}
+			.fa-facebook {  
+				background: #3B5998;  
+				color: white;  
+				transition-duration: 0.4s;
+				
+			}  
+			.fa-facebook:hover {
+				background-color: blue;
+			}
+			.fa-instagram {  
+				background: #125688;  
+				color: white; 
+				transition-duration: 0.4s;				
+			}  
+			.fa-instagram:hover {
+				background-color: blue;
+			}
+			.fa-youtube {  
+				background: #bb0000;  
+				color: white;
+				transition-duration: 0.4s;
+			}  
+			.fa-youtube:hover {
+				background-color: red;
+			}
+			/* --------------------------Different devices-----------------*/
+			@media only screen and (min-width: 480px) {
+				#welcome {
+					font-size: 1.5em;
+					
+				}
+				
+			}
+			@media only screen and (min-width: 768px) {
+				#welcome {
+					font-size: 20px;
+					
+				}
+			}
+			
+			@media only screen and (min-width: 1140px) {
+				#welcome {
+					font-size: 2em;
+					
+				}
+			}
+			
+        </style>
+    </head>
+    <body>
+		<div>
+		<p id="welcome">Sam's English lessons<p>
+		
+		<button class="new-user">Sign up</button>
+				
+		<button class="login">Login</button>
+			
+		<h1>Welcome to user login</h1>
+			</div>
+		<ul class="social-media">
+			<li>   
+				<a href="https://www.facebook.com/samuel.cauchon.1" target="_blank" class="fa fa-facebook"> </a>   
+			</li>  
+			<li>  
+				<a href="https://www.instagram.com/whatsup.sam/" target="_blank" class="fa fa-instagram"> </a>  
+			</li>  
+			<li>
+				<a href="https://www.youtube.com/" target="_blank" class="fa fa-youtube"> </a>  
+			</li>
+			
+			
+		</ul>
+    </body>
+</html>
