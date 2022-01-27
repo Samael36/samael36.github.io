@@ -66,7 +66,7 @@
 					-webkit-transform: rotate(45deg) translate(-8px, -8px) ;
 					transform: rotate(45deg) translate(-8px, -8px) ;
 				}
-				/* --------------------------Welcome-----------------*/
+				/* ---------------------------------------------------------------Welcome-----------------*/
 				.welcome {
 					text-shadow: -2px 0 black, 0 2px black, 2px 0 black, 0 -2px black;
 					font-family: 'Playfair Display', serif;
@@ -79,8 +79,38 @@
 					width: 100%;
 					left: 0%;
 				}
-				
-				/* --------------------------Sign up and Login-----------------*/
+				/* -------------------------------------------------------------------Sidebar---------------------*/
+				.sidebar {
+					border-radius: 8px;
+					background:rgba(0,0,0,0.6);
+					position: fixed;
+					left: 0%;
+					
+				}
+				.bu {
+					padding: 0.5em;  
+					text-align: center;  
+					margin: 3px;  
+					height: 2.2em;
+					border-radius: 0.4em;
+					
+				}
+				.button1 {
+					background: #125688;
+				}
+				.button2 {
+					background: rgb(200,120,35);
+				}
+				.button3 {
+					background: rgb(15,77,36);
+				}
+				.button4 {
+					background: rgb(150,42,29);
+				}
+				.button5 {
+					background: purple;
+				}
+				/* --------------------------------------------------------------------Sign up and Login-----------------*/
 				.new-user {
 					font-family: 'Playfair Display', serif;
 					color: rgb(200,120,35);
@@ -90,6 +120,7 @@
 					border-radius: 8px;
 					position: fixed;
 					transition-duration: 0.4s;
+					z-index: 1;
 				}
 				.new-user:hover {
 					background-color: red; /* Green */
@@ -111,7 +142,7 @@
 					color: rgb(200,120,35);
 				}
 				
-				/* --------------------------Social Media-----------------*/
+				/* --------------------------------------------------------------------Social Media-----------------*/
 				.fa {  
 					padding: 0.7em;  
 					text-align: center;  
@@ -150,7 +181,7 @@
 					background-color: red;
 				}
 				
-				/*-----------------------------main text---------------------*/
+				/*-----------------------------------------------------------------------main text---------------------*/
 				.center-text {
 					text-shadow: -1px 0 black, 0 1px black, 1px 0 black, 0 -1px black;
 					font-family: 'Playfair Display', serif;
@@ -158,13 +189,7 @@
 					border-radius: 8px;
 					background:rgba(0,0,0,0.7);
 					text-align: left;
-					overflow: auto;
-					height: 33em;
-					margin-top: 3em;
-					margin-bottom: 0em;
-					margin-left: 0em;
-					margin-right: 0em;
-					
+					overflow: auto;					
 				}
 				/* --------------------------------------------------------------Different devices----------------------------------------*/
 				/* --------------------------------------Mobile Portrait----------*/
@@ -175,7 +200,7 @@
 					}
 					.new-user {
 						font-size: 1em;
-						top:2.8em;
+						top:2.9em;
 						right: 0.3em;
 					}
 					.login {
@@ -188,7 +213,18 @@
 						width: 0.6em;  
 						height: 0.6em;
 					}
-					
+					.center-text {
+						height: 33em;
+						margin-top: 3.2em;
+						margin-bottom: 0em;
+						margin-left: 0em;
+						margin-right: 0em;
+					}
+					.sidebar {
+						top: 2.7em;
+						width: 100%;
+						height: 2em;					
+					}
 				}
 				/* ----------------------------------------Mobile Landscape------*/
 				@media only screen
@@ -215,17 +251,24 @@
 						bottom: 7em;
 					}
 					.fa-instagram {
-						bottom: 3.5em;
+						bottom: 4.5em;
 					}
 					.fa-youtube {
-						bottom: 0em;
+						bottom: 2em;
 					}
 					.center-text {
-						height: 14em;
-						margin-top: 3em;
+						height: 15em;
+						margin-top: 1.5em;
 						margin-bottom: 0em;
-						margin-left: 0em;
-						margin-right: 0em;
+						margin-left: 2em;
+						margin-right: 1.5em;
+					}
+					.sidebar {
+						width: 2em;
+						height: 55%;	
+						top: 3.2em;	
+						left: 0.1em;
+						bottom: 1em;
 					}
 				}
 				
@@ -259,15 +302,25 @@
 						bottom: 3em;
 					}
 					.center-text {
-						height: 59em;
+						height: 58em;
 						margin-top: 2em;
-						margin-bottom: 0em;
+						margin-bottom: 3em;
 						margin-left: 2.5em;
 						margin-right: 2.5em;
 					}
+					.sidebar {
+						width: 2.5em;
+						height: 70%;	
+						top: 3.7em;	
+						left: 0.2em;
+						bottom: 1em;
+					}
+					.bu {
+						padding: 0.7em;  
+					}
 				}
 				/*-----------------------------------------------Tablet Landscape----------*/
-				@media only screen and (min-width: 600px)
+				@media only screen and (min-width: 800px)
 				and (orientation: landscape) {
 					.welcome {
 						font-size: 2em;
@@ -287,24 +340,37 @@
 						padding: 1em;
 					}
 					.fa-facebook {
-						bottom: 8em;
+						bottom: 9em;
+						right:0.6em;
 					}
 					.fa-instagram {
-						bottom: 5em;
+						bottom: 6em;
+						right:0.6em;
 					}
 					.fa-youtube {
-						bottom: 2em;
+						bottom: 3em;
+						right:0.6em;
 					}
 					.center-text {
-						height: 40em;
+						height: 39em;
 						margin-top: 2em;
 						margin-bottom: 0em;
 						margin-left: 2.5em;
 						margin-right: 2.5em;
 					}
+					.bu {
+					}
+					.sidebar {
+						width: 2.5em;
+						height: 55%;	
+						top: 3.6em;	
+						left: 0.2em;
+						bottom: 1em;
+					}
+					
 				}
 				/*-----------------------------------------------Laptop----------*/
-				@media only screen and (min-width: 992px) {
+				@media only screen and (min-width: 1200px) {
 					.welcome {
 						font-size: 2em;
 					}
@@ -351,7 +417,7 @@
 		
 		<body>
 			
-			<div class="sticky-bar">
+			<div>
 				<div class="container" onclick="myFunction(this)">
 					<div class="bar1"></div>
 					<div class="bar2"></div>
@@ -363,7 +429,13 @@
 					<button class="login">Login</button>
 				</div>
 			</div>
-			
+			<div class="sidebar">
+				<button class="bu button1">O</button>
+				<button class="bu button2">O</button>
+				<button class="bu button3">O</button>
+				<button class="bu button4">O</button>
+				<button class="bu button5">O</button>
+			</div>
 			<div>
 				<a href="https://www.facebook.com/samuel.cauchon.1" target="_blank" class="fa fa-facebook"> </a>   
 				<a href="https://www.instagram.com/whatsup.sam/" target="_blank" class="fa fa-instagram"> </a>  
