@@ -22,7 +22,7 @@
 					overflow: hidden;
 				}
 				
-				/* --------------------------Menu Button-----------------*/
+				/* --------------------------Sidebar Button-----------------*/
 				.container {
 					 display: inline-block;
 					 cursor: pointer;
@@ -38,8 +38,6 @@
 					position: fixed;
 					left: 0.5em;
 					z-index: 2;
-						
-					
 				}
 				.bar1 {
 					top: 0.4em;
@@ -53,20 +51,57 @@
 				/* Rotate first bar */
 				.change .bar1 {
 					-webkit-transform: rotate(-45deg) translate(-9px, 6px) ;
-					transform: rotate(-45deg) translate(-9px, 6px) ;
-					
+					transform: rotate(-45deg) translate(-9px, 6px) ;	
 				}
-
 				/* Fade out the second bar */
 				.change .bar2 {
 					opacity: 0;
 				}
-
 				/* Rotate last bar */
 				.change .bar3 {
 					-webkit-transform: rotate(45deg) translate(-8px, -8px) ;
 					transform: rotate(45deg) translate(-8px, -8px) ;
 				}
+				/*--------------------------------Side bar------------------------------*/
+				.sidebar {
+					height: 50%;
+					width: 0;
+					position: fixed;
+					z-index: 1;
+					top: 0;
+					left: 0;
+					background-color: rgb(15,77,36);
+					overflow-x: hidden; 
+					padding-top: 60px; /* Place content 60px from the top */
+					transition: 0.4s; /* 0.5 second transition effect to slide in the sidebar */
+					border: 2px solid;
+					border-radius: 8px;
+				}
+				.change .sidebar {
+					width: 250px;
+				}
+				/* The sidebar links */
+				.sidebar a {
+					text-shadow: -1px 0 black, 0 1px black, 1px 0 black, 0 -1px black;
+					padding: 8px 8px 8px 50px;
+					text-decoration: none;
+					font-size: 25px;
+					color: rgb(200,120,35);
+					display: block;
+					transition: 0.3s;
+				}
+
+				/* When you mouse over the navigation links, change their color */
+				.sidebar a:hover {
+				  color: #f1f1f1;
+				}
+			
+				/* On smaller screens, where height is less than 450px, change the style of the sidenav (less padding and a smaller font size) */
+				@media screen and (max-height: 450px) {
+				  .sidebar {padding-top: 15px;}
+				  .sidebar a {font-size: 18px;}
+				}
+				
 				/* ---------------------------------------------------------------Welcome-----------------*/
 				.welcome {
 					text-shadow: -2px 0 black, 0 2px black, 2px 0 black, 0 -2px black;
@@ -144,7 +179,83 @@
 					color: white;
 					color: rgb(200,120,35);
 				}
+				.sidebarLogin {
+					height: 50%;
+					width: 0;
+					position: fixed;
+					z-index: 1;
+					top: 0;
+					right: 0;
+					background-color: rgb(15,77,36);
+					overflow-x: hidden; 
+					padding-top: 60px; /* Place content 60px from the top */
+					transition: 0.4s; /* 0.5 second transition effect to slide in the sidebar */
+					border: 2px solid;
+					border-radius: 8px;
+				}
+				.sidebarLogin p {
+					text-shadow: -1px 0 black, 0 1px black, 1px 0 black, 0 -1px black;
+					padding: 8px 8px 8px 50px;
+					text-decoration: none;
+					font-size: 20x;
+					color: rgb(200,120,35);
+					display: block;
+					transition: 0.3s;
+				}
+				.changeLogin .sidebarLogin {
+					width: 250px;
+				}
 				
+					
+				
+				
+				.containerLogin {
+					 display: inline-block;
+					 cursor: pointer;
+				}
+				.barLogin1, .barLogin3 {
+					width: 35px;
+					height: 5px;
+					background-color: rgb(200,120,35);;
+					margin: 6px 0;
+					transition: 0.4s;
+					border: 2px solid;
+					border-radius: 8px;
+					position: fixed;
+					right: -3em;
+					z-index: 2;
+					opacity: 0;
+				}
+				.barLogin1 {
+					top: 0.4em;
+					-webkit-transform: rotate(-45deg) translate(-9px, 6px) ;
+					transform: rotate(-45deg) translate(-9px, 6px) ;
+				}
+				
+				.barLogin3 {
+					top: 1.6em;
+					-webkit-transform: rotate(45deg) translate(-8px, -8px) ;
+					transform: rotate(45deg) translate(-8px, -8px) ;
+				}
+							
+			
+				
+				
+				
+				
+				
+				input {
+					
+					margin-left: 4em;
+					width: 9em;
+					
+				}
+				.account {
+					left: 3em;
+				}
+				input .password {
+					
+				}
 				/* --------------------------------------------------------------------Social Media-----------------*/
 				.fa {  
 					padding: 0.7em;  
@@ -182,46 +293,6 @@
 				}  
 				.fa-youtube:hover {
 					background-color: red;
-				}
-				/*--------------------------------Side bar------------------------------*/
-				.sidebar {
-					height: 100%;
-					width: 0;
-					position: fixed;
-					z-index: 1;
-					top: 0;
-					left: 0;
-					background-color: rgb(15,77,36);
-					overflow-x: hidden; 
-					padding-top: 60px; /* Place content 60px from the top */
-					transition: 0.4s; /* 0.5 second transition effect to slide in the sidebar */
-					border: 2px solid;
-					border-radius: 8px;
-				}
-				.change .sidebar {
-					width: 250px;
-				}
-				/* The sidebar links */
-				.sidebar a {
-					text-shadow: -1px 0 black, 0 1px black, 1px 0 black, 0 -1px black;
-				  padding: 8px 8px 8px 32px;
-				  text-decoration: none;
-				  font-size: 25px;
-				  color: rgb(200,120,35);
-				  display: block;
-				  
-				  transition: 0.3s;
-				}
-
-				/* When you mouse over the navigation links, change their color */
-				.sidebar a:hover {
-				  color: #f1f1f1;
-				}
-			
-				/* On smaller screens, where height is less than 450px, change the style of the sidenav (less padding and a smaller font size) */
-				@media screen and (max-height: 450px) {
-				  .sidebar {padding-top: 15px;}
-				  .sidebar a {font-size: 18px;}
 				}
 				
 				/*-----------------------------------------------------------------------main text---------------------*/
@@ -313,6 +384,9 @@
 						top: 3.2em;	
 						left: 0.1em;
 						bottom: 1em;
+					}
+					.sidebar {
+					height: 75%;
 					}
 				}
 				
@@ -467,25 +541,51 @@
 					<div class="bar2"></div>
 					<div class="bar3"></div>
 					<div class="sidebar">
-						<a href="#">About</a>
-						<a href="#">Services</a>
-						<a href="#">Clients</a>
+						<a STYLE="padding-top: 2em" href="#">Beginner</a>
+						<a href="#">Intermediate</a>
+						<a href="#">Advanced</a>
+						<a href="#">Resources</a>
 						<a href="#">Contact</a>
 					</div>
 				</div>
+				<p  class="welcome">Learning English</p>
 				<div>
-					<p  class="welcome">Learning English</p>
 					<button class="new-user">Sign up</button>	
-					<button class="login">Login</button>
+					<button class="login" onclick="openLogin()">Login</button>
+				</div>
+				
+				
+				<div id="loginContainer" class="sidebarLogin">
+					<div class="containerLogin" onclick="closeLogin()">
+						<div id="xOpacity1" class="barLogin1"></div>
+						<div id="xOpacity3" class="barLogin3"></div>
+					</div>
+					<div>
+						<p>Account:</p>
+						<input class="account"></input>
+						<p>Password:</p>
+						<input class="password"></input>
+					</div>
 				</div>
 			</div>
 			
-			
-			
 			<script>
 				function myFunction(x) {
-				  x.classList.toggle("change");
-				  
+					x.classList.toggle("change");
+				}
+				function openLogin() {
+					document.getElementById("xOpacity1").style.opacity = "1";
+					document.getElementById("xOpacity3").style.opacity = "1";
+					document.getElementById("xOpacity1").style.right = "0.5em";
+					document.getElementById("xOpacity3").style.right = "0.5em";
+					document.getElementById("loginContainer").style.width = "250px";
+				}
+				function closeLogin() {
+					document.getElementById("loginContainer").style.width = "0";
+					document.getElementById("xOpacity1").style.opacity = "0";
+					document.getElementById("xOpacity3").style.opacity = "0";
+					document.getElementById("xOpacity1").style.right = "-3em";
+					document.getElementById("xOpacity3").style.right = "-3em";
 				}
 			</script>
 			
