@@ -37,7 +37,7 @@
 					border-radius: 8px;
 					position: fixed;
 					left: 0.5em;
-					z-index: 1;
+					z-index: 2;
 						
 					
 				}
@@ -54,6 +54,7 @@
 				.change .bar1 {
 					-webkit-transform: rotate(-45deg) translate(-9px, 6px) ;
 					transform: rotate(-45deg) translate(-9px, 6px) ;
+					
 				}
 
 				/* Fade out the second bar */
@@ -79,8 +80,8 @@
 					width: 100%;
 					left: 0%;
 				}
-				/* -------------------------------------------------------------------Sidebar---------------------*/
-				.sidebar {
+				/* -------------------------------------------------------------------Options---------------------*/
+				.options {
 					border-radius: 8px;
 					background:rgba(0,0,0,0.6);
 					position: fixed;
@@ -182,6 +183,46 @@
 				.fa-youtube:hover {
 					background-color: red;
 				}
+				/*--------------------------------Side bar------------------------------*/
+				.sidebar {
+					height: 100%;
+					width: 0;
+					position: fixed;
+					z-index: 1;
+					top: 0;
+					left: 0;
+					background-color: rgb(15,77,36);
+					overflow-x: hidden; 
+					padding-top: 60px; /* Place content 60px from the top */
+					transition: 0.4s; /* 0.5 second transition effect to slide in the sidebar */
+					border: 2px solid;
+					border-radius: 8px;
+				}
+				.change .sidebar {
+					width: 250px;
+				}
+				/* The sidebar links */
+				.sidebar a {
+					text-shadow: -1px 0 black, 0 1px black, 1px 0 black, 0 -1px black;
+				  padding: 8px 8px 8px 32px;
+				  text-decoration: none;
+				  font-size: 25px;
+				  color: rgb(200,120,35);
+				  display: block;
+				  
+				  transition: 0.3s;
+				}
+
+				/* When you mouse over the navigation links, change their color */
+				.sidebar a:hover {
+				  color: #f1f1f1;
+				}
+			
+				/* On smaller screens, where height is less than 450px, change the style of the sidenav (less padding and a smaller font size) */
+				@media screen and (max-height: 450px) {
+				  .sidebar {padding-top: 15px;}
+				  .sidebar a {font-size: 18px;}
+				}
 				
 				/*-----------------------------------------------------------------------main text---------------------*/
 				.center-text {
@@ -222,7 +263,7 @@
 						margin-left: 0em;
 						margin-right: 0em;
 					}
-					.sidebar {
+					.options {
 						top: 2.7em;
 						width: 11.5em;
 						height: 2em;	
@@ -266,7 +307,7 @@
 						margin-left: 2em;
 						margin-right: 1.5em;
 					}
-					.sidebar {
+					.options {
 						width: 2em;
 						height: 11.2em;	
 						top: 3.2em;	
@@ -311,7 +352,7 @@
 						margin-left: 2.5em;
 						margin-right: 2.5em;
 					}
-					.sidebar {
+					.options {
 						width: 2.5em;
 						height: 70%;	
 						top: 3.7em;	
@@ -363,7 +404,7 @@
 					}
 					.bu {
 					}
-					.sidebar {
+					.options {
 						width: 2.5em;
 						height: 55%;	
 						top: 3.6em;	
@@ -425,6 +466,12 @@
 					<div class="bar1"></div>
 					<div class="bar2"></div>
 					<div class="bar3"></div>
+					<div class="sidebar">
+						<a href="#">About</a>
+						<a href="#">Services</a>
+						<a href="#">Clients</a>
+						<a href="#">Contact</a>
+					</div>
 				</div>
 				<div>
 					<p  class="welcome">Learning English</p>
@@ -432,7 +479,17 @@
 					<button class="login">Login</button>
 				</div>
 			</div>
-			<div class="sidebar">
+			
+			
+			
+			<script>
+				function myFunction(x) {
+				  x.classList.toggle("change");
+				  
+				}
+			</script>
+			
+			<div class="options">
 				<button class="bu button1">O</button>
 				<button class="bu button2">O</button>
 				<button class="bu button3">O</button>
@@ -444,11 +501,7 @@
 				<a href="https://www.instagram.com/whatsup.sam/" target="_blank" class="fa fa-instagram"> </a>  
 				<a href="https://www.youtube.com/" target="_blank" class="fa fa-youtube"> </a>  
 			</div>
-			<script>
-				function myFunction(x) {
-				  x.classList.toggle("change");
-				}
-			</script>
+		
 			<div class="center-text">
 				<p STYLE="margin: 0.5em">
 					<strong STYLE="font-size:30px">Seize the day</strong><br>
