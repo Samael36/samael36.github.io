@@ -23,83 +23,96 @@
 				}
 				
 				/* --------------------------Sidebar Button-----------------*/
-				.container {
+				.menuButton {
 					 display: inline-block;
 					 cursor: pointer;
 				}
 				.bar1, .bar2, .bar3 {
+					left: 0.5em;
+					z-index: 1;
+				}
+				.bar1, .bar2, .bar3, .xMenu1, .xMenu3, .xLogin1, .xLogin3{
 					width: 35px;
 					height: 5px;
-					background-color: rgb(200,120,35);;
+					background-color: rgb(200,120,35);
 					margin: 6px 0;
 					transition: 0.4s;
 					border: 2px solid;
 					border-radius: 8px;
 					position: fixed;
-					left: 0.5em;
+				}
+				.bar1 {top: 0.4em;}
+				.bar2 {top: 1em;}
+				.bar3 {top: 1.6em;}
+
+				.xBase {
+					 display: inline-block;
+					 cursor: pointer;
+				}
+				.xLogin1, .xLogin3 {
+					right: -3em;
 					z-index: 2;
 				}
-				.bar1 {
+				.xMenu1, .xMenu3 {
+					left: -3em;
+					z-index: 2;
+					
+				}
+				.xMenu1, .xLogin1 {
 					top: 0.4em;
-				}
-				.bar2 {
-					top: 1em;
-				}
-				.bar3 {
-					top: 1.6em;
-				}
-				/* Rotate first bar */
-				.change .bar1 {
 					-webkit-transform: rotate(-45deg) translate(-9px, 6px) ;
-					transform: rotate(-45deg) translate(-9px, 6px) ;	
+					transform: rotate(-45deg) translate(-9px, 6px) ;
 				}
-				/* Fade out the second bar */
-				.change .bar2 {
-					opacity: 0;
-				}
-				/* Rotate last bar */
-				.change .bar3 {
+				
+				.xMenu3, .xLogin3 {
+					top: 1.6em;
 					-webkit-transform: rotate(45deg) translate(-8px, -8px) ;
 					transform: rotate(45deg) translate(-8px, -8px) ;
 				}
+			
 				/*--------------------------------Side bar------------------------------*/
-				.sidebar {
+				.menuSidebar, .loginSidebar {
 					height: 50%;
 					width: 0;
 					position: fixed;
 					z-index: 1;
 					top: 0;
-					left: 0;
 					background-color: rgb(15,77,36);
 					overflow-x: hidden; 
-					padding-top: 60px; /* Place content 60px from the top */
-					transition: 0.4s; /* 0.5 second transition effect to slide in the sidebar */
-					border: 2px solid;
+					padding-top: 60px; 
+					transition: 0.4s; 
 					border-radius: 8px;
 				}
-				.change .sidebar {
-					width: 250px;
+				.menuSidebar {
+					left: 0;
+					
 				}
+				.loginSidebar {
+					right: 0;
+				}
+				
 				/* The sidebar links */
-				.sidebar a {
+				.menuSidebar a, .loginSidebar p {
 					text-shadow: -1px 0 black, 0 1px black, 1px 0 black, 0 -1px black;
 					padding: 8px 8px 8px 50px;
 					text-decoration: none;
-					font-size: 25px;
 					color: rgb(200,120,35);
+					font-size: 20px;
 					display: block;
 					transition: 0.3s;
 				}
+				
+					
 
 				/* When you mouse over the navigation links, change their color */
-				.sidebar a:hover {
+				.menuSidebar a:hover {
 				  color: #f1f1f1;
 				}
 			
 				/* On smaller screens, where height is less than 450px, change the style of the sidenav (less padding and a smaller font size) */
 				@media screen and (max-height: 450px) {
-				  .sidebar {padding-top: 15px;}
-				  .sidebar a {font-size: 18px;}
+				  .menuSidebar {padding-top: 15px;}
+				  .menuSidebar a {font-size: 18px;}
 				}
 				
 				/* ---------------------------------------------------------------Welcome-----------------*/
@@ -148,102 +161,33 @@
 				.button5 {
 					background: purple;
 				}
+				
 				/* --------------------------------------------------------------------Sign up and Login-----------------*/
-				.new-user {
+				.new-user, .login {
 					font-family: 'Playfair Display', serif;
 					color: rgb(200,120,35);
 					font-weight: bold;
-					background-color: rgb(150,42,29);
 					border: 2px solid;
 					border-radius: 8px;
 					position: fixed;
 					transition-duration: 0.4s;
-					z-index: 1;
+				}
+				.new-user {
+					background-color: rgb(150,42,29);
 				}
 				.new-user:hover {
-					background-color: red; /* Green */
+					background-color: red;
 					color: white;
 				}
 				.login {
-					font-family: 'Playfair Display', serif;
-					color: rgb(200,120,35);
-					font-weight: bold;
 					background-color: rgb(15,77,36);
-					border: 2px solid;
-					border-radius: 8px;
-					position: fixed;
-					transition-duration: 0.4s;
 				}
 				.login:hover {
-					background-color: #4CAF50; /* Green */
+					background-color: green;
 					color: white;
-					color: rgb(200,120,35);
-				}
-				.sidebarLogin {
-					height: 50%;
-					width: 0;
-					position: fixed;
-					z-index: 1;
-					top: 0;
-					right: 0;
-					background-color: rgb(15,77,36);
-					overflow-x: hidden; 
-					padding-top: 60px; /* Place content 60px from the top */
-					transition: 0.4s; /* 0.5 second transition effect to slide in the sidebar */
-					border: 2px solid;
-					border-radius: 8px;
-				}
-				.sidebarLogin p {
-					text-shadow: -1px 0 black, 0 1px black, 1px 0 black, 0 -1px black;
-					padding: 8px 8px 8px 50px;
-					text-decoration: none;
-					font-size: 20x;
-					color: rgb(200,120,35);
-					display: block;
-					transition: 0.3s;
-				}
-				.changeLogin .sidebarLogin {
-					width: 250px;
-				}
-				
 					
-				
-				
-				.containerLogin {
-					 display: inline-block;
-					 cursor: pointer;
 				}
-				.barLogin1, .barLogin3 {
-					width: 35px;
-					height: 5px;
-					background-color: rgb(200,120,35);;
-					margin: 6px 0;
-					transition: 0.4s;
-					border: 2px solid;
-					border-radius: 8px;
-					position: fixed;
-					right: -3em;
-					z-index: 2;
-					opacity: 0;
-				}
-				.barLogin1 {
-					top: 0.4em;
-					-webkit-transform: rotate(-45deg) translate(-9px, 6px) ;
-					transform: rotate(-45deg) translate(-9px, 6px) ;
-				}
-				
-				.barLogin3 {
-					top: 1.6em;
-					-webkit-transform: rotate(45deg) translate(-8px, -8px) ;
-					transform: rotate(45deg) translate(-8px, -8px) ;
-				}
-							
 			
-				
-				
-				
-				
-				
 				input {
 					
 					margin-left: 4em;
@@ -531,34 +475,54 @@
 				
 			</style>
 		</head>
-		
-		
 		<body>
-			
 			<div>
-				<div class="container" onclick="myFunction(this)">
+				<div class="menuButton" onclick="menuOpen(); loginClose()">
 					<div class="bar1"></div>
 					<div class="bar2"></div>
 					<div class="bar3"></div>
-					<div class="sidebar">
+				</div>
+				<div id="menuSidebar" class="menuSidebar">
+					<div class="xBase" onclick="menuClose()">
+						<div id="xLeft1" class="xMenu1"></div>
+						<div id="xLeft3" class="xMenu3"></div>
+					</div>
+					<div>
 						<a STYLE="padding-top: 2em" href="#">Beginner</a>
 						<a href="#">Intermediate</a>
 						<a href="#">Advanced</a>
 						<a href="#">Resources</a>
 						<a href="#">Contact</a>
 					</div>
+					
 				</div>
-				<p  class="welcome">Learning English</p>
-				<div>
-					<button class="new-user">Sign up</button>	
-					<button class="login" onclick="openLogin()">Login</button>
-				</div>
+			</div>
+			
+			<script>
+				function menuOpen() {
+					document.getElementById("menuSidebar").style.width = "250px";
+					document.getElementById("xLeft1").style.left = "0.5em";
+					document.getElementById("xLeft3").style.left = "0.5em";		
+					document.getElementById("menuSidebar").style.border = "2px solid";
+				}
+				function menuClose() {
+					document.getElementById("menuSidebar").style.width = "0";
+					document.getElementById("xLeft1").style.left = "-3em";
+					document.getElementById("xLeft3").style.left = "-3em";
+					document.getElementById("menuSidebar").style.border = "0";
+				}
+			</script>
+			
 				
-				
-				<div id="loginContainer" class="sidebarLogin">
-					<div class="containerLogin" onclick="closeLogin()">
-						<div id="xOpacity1" class="barLogin1"></div>
-						<div id="xOpacity3" class="barLogin3"></div>
+			
+			<p class="welcome">Learn English</p>
+			<button class="new-user">Sign up</button>
+			<div>	
+				<button class="login" onclick="loginOpen(); menuClose()">Login</button>
+				<div id="loginSidebar" class="loginSidebar">
+					<div class="xBase" onclick="loginClose()">
+						<div id="xRight1" class="xLogin1"></div>
+						<div id="xRight2" class="xLogin3"></div>
 					</div>
 					<div>
 						<p>Account:</p>
@@ -568,26 +532,21 @@
 					</div>
 				</div>
 			</div>
-			
 			<script>
-				function myFunction(x) {
-					x.classList.toggle("change");
+				function loginOpen() {
+					document.getElementById("loginSidebar").style.width = "250px";
+					document.getElementById("xRight1").style.right = "0.5em";
+					document.getElementById("xRight2").style.right = "0.5em";
+					document.getElementById("loginSidebar").style.border = "2px solid";
 				}
-				function openLogin() {
-					document.getElementById("xOpacity1").style.opacity = "1";
-					document.getElementById("xOpacity3").style.opacity = "1";
-					document.getElementById("xOpacity1").style.right = "0.5em";
-					document.getElementById("xOpacity3").style.right = "0.5em";
-					document.getElementById("loginContainer").style.width = "250px";
-				}
-				function closeLogin() {
-					document.getElementById("loginContainer").style.width = "0";
-					document.getElementById("xOpacity1").style.opacity = "0";
-					document.getElementById("xOpacity3").style.opacity = "0";
-					document.getElementById("xOpacity1").style.right = "-3em";
-					document.getElementById("xOpacity3").style.right = "-3em";
+				function loginClose() {
+					document.getElementById("loginSidebar").style.width = "0px";
+					document.getElementById("xRight1").style.right = "-3em";
+					document.getElementById("xRight2").style.right = "-3em";
+					document.getElementById("loginSidebar").style.border = "0";
 				}
 			</script>
+			
 			
 			<div class="options">
 				<button class="bu button1">O</button>
